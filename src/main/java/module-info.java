@@ -12,6 +12,7 @@ module co.edu.uniquindio.edu.poo.vet {
     requires javafx.graphics;
     requires javafx.base;
 
+
     opens co.edu.uniquindio.edu.poo.vet to javafx.fxml;
     exports co.edu.uniquindio.edu.poo.vet;
     exports co.edu.uniquindio.edu.poo.vet.App;
