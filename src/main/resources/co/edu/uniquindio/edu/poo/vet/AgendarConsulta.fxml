@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="520.0" prefWidth="840.0" spacing="20.0"
+      style="-fx-background-color: linear-gradient(to bottom, #F0FFF4, #FFFFFF);"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.AgendarConsultaViewController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="📅 Agendar Consulta 🐾"
+           style="-fx-text-fill: #2C7A7B; -fx-font-weight: bold;">
+        <font>
+            <Font size="28.0"/>
+        </font>
+    </Label>
+
+    <AnchorPane prefHeight="200.0" prefWidth="800.0"
+                style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;
+                       -fx-border-color: #81E6D9; -fx-border-width: 2;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER" spacing="10.0"
+                  AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+                  AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+
+                <DatePicker fx:id="dateFecha" promptText="Fecha de la consulta"
+                            style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+                <TextField fx:id="txtHora" promptText="Hora (HH:mm)"
+                           style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+                <TextField fx:id="txtMotivo" promptText="Motivo de la consulta"
+                           style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+
+                <ComboBox fx:id="comboVeterinario" promptText="Seleccione Veterinario"
+                          style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+
+                <Button fx:id="btnAgendar" text="Agendar Consulta"
+                        style="-fx-background-color: #38B2AC; -fx-text-fill: white;
+                               -fx-font-weight: bold; -fx-background-radius: 20; -fx-border-radius: 20;
+                               -fx-padding: 8 16 8 16;"/>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <AnchorPane prefHeight="260.0" prefWidth="800.0"
+                style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;
+                       -fx-border-color: #81E6D9; -fx-border-width: 2;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);">
+        <children>
+            <TableView fx:id="tablaConsultas"
+                       AnchorPane.topAnchor="10.0"
+                       AnchorPane.leftAnchor="10.0"
+                       AnchorPane.rightAnchor="10.0"
+                       AnchorPane.bottomAnchor="10.0"
+                       prefWidth="780.0">
+
+                <columns>
+                    <TableColumn fx:id="colFecha" text="Fecha" prefWidth="150.0"/>
+                    <TableColumn fx:id="colHora" text="Hora" prefWidth="150.0"/>
+                    <TableColumn fx:id="colMotivo" text="Motivo de la Consulta" prefWidth="280.0"/>
+                    <TableColumn fx:id="colVeterinario" text="Veterinario" prefWidth="200.0"/>
+                </columns>
+            </TableView>
+        </children>
+    </AnchorPane>
+
+</VBox>
+
+
+

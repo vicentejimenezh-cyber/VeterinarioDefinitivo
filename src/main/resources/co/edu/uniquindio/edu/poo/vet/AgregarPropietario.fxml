@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="900.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #DFF7EE, #FFFFFF);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.RegistrarPropietarioViewController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;" text="🐾 Registro de Propietarios 🐾">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Text>
+
+    <AnchorPane prefHeight="250.0" prefWidth="850.0" style="-fx-background-color: white; -fx-background-radius: 20;                        -fx-border-radius: 20; -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER_LEFT" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+
+                <HBox spacing="15.0">
+                    <VBox spacing="4.0">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" text="ID:" />
+                        <TextField fx:id="txtId" promptText="Ingrese ID" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+                    </VBox>
+                    <VBox spacing="4.0">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" text="Nombre:" />
+                        <TextField fx:id="txtNombre" promptText="Ingrese nombre" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="15.0">
+                    <VBox spacing="4.0">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" text="Apellido:" />
+                        <TextField fx:id="txtApellido" promptText="Ingrese apellido" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+                    </VBox>
+                    <VBox spacing="4.0">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" text="Teléfono:" />
+                        <TextField fx:id="txtTelefono" promptText="Ingrese teléfono" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+                    </VBox>
+                </HBox>
+
+                <VBox spacing="4.0">
+                    <Label style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" text="Dirección:" />
+                    <TextField fx:id="txtDireccion" promptText="Ingrese dirección" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+                </VBox>
+
+                <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 10 0 0 0;">
+                    <Button fx:id="btnRegistrar" style="-fx-background-color: #2ECC71; -fx-text-fill: white;                                    -fx-font-size: 14px; -fx-font-weight: bold;                                    -fx-background-radius: 28; -fx-border-radius: 28;                                    -fx-padding: 8 20 8 20;" text="💾 Registrar" />
+                    <Button fx:id="btnLimpiar" style="-fx-background-color: #1ABC9C; -fx-text-fill: white;                                    -fx-font-size: 14px; -fx-font-weight: bold;                                    -fx-background-radius: 28; -fx-border-radius: 28;                                    -fx-padding: 8 20 8 20;" text="🔄 Limpiar" />
+                </HBox>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <AnchorPane prefHeight="250.0" prefWidth="850.0" style="-fx-background-color: white; -fx-background-radius: 20;                        -fx-border-radius: 20; -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);">
+        <children>
+            <TableView fx:id="tablaPropietarios" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                <columns>
+                    <TableColumn fx:id="colId" prefWidth="80.0" text="ID" />
+                    <TableColumn fx:id="colNombre" prefWidth="150.0" text="Nombre" />
+                    <TableColumn fx:id="colApellido" prefWidth="150.0" text="Apellido" />
+                    <TableColumn fx:id="colTelefono" prefWidth="150.0" text="Teléfono" />
+                    <TableColumn fx:id="colDireccion" prefWidth="250.0" text="Dirección" />
+                </columns>
+            </TableView>
+        </children>
+    </AnchorPane>
+
+    <Button fx:id="btnVolv" onAction="#OnVol" style="-fx-background-color: #E74C3C; -fx-text-fill: white;                    -fx-font-size: 14px; -fx-font-weight: bold;                    -fx-background-radius: 28; -fx-border-radius: 28;                    -fx-padding: 8 20 8 20;" text="🚪 Volver" />
+
+</VBox>

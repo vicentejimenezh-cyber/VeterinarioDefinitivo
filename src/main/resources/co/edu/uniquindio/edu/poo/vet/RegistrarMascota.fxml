@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="840.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #DFF7EE, #FFFFFF);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.RegistrarMascotaViewController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-text-fill: #226B5A; -fx-font-weight: bold;" text="🐾 Registrar Mascota 🐾">
+        <font>
+            <Font size="28.0" />
+        </font>
+    </Label>
+
+    <AnchorPane prefHeight="140.0" prefWidth="800.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;                        -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+
+                <TextField fx:id="txtNombre" promptText="Nombre" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+                <TextField fx:id="txtEspecie" promptText="Especie" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+                <TextField fx:id="txtRaza" promptText="Raza" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+                <TextField fx:id="txtEdad" promptText="Edad" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+                <Button fx:id="btnRegistrarMascota" onAction="#OnregistrarMascota" style="-fx-background-color: #2ECC71; -fx-text-fill: white;                                -fx-font-weight: bold; -fx-background-radius: 20; -fx-border-radius: 20;                                -fx-padding: 8 16 8 16;" text="Registrar Mascota" />
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <AnchorPane prefHeight="260.0" prefWidth="800.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;                        -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);">
+        <children>
+            <TableView fx:id="tablaMascotas" prefWidth="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+
+                <columns>
+                    <TableColumn fx:id="colNombre" prefWidth="177.5" text="Nombre" />
+                    <TableColumn fx:id="colEspecie" prefWidth="177.5" text="Especie" />
+                    <TableColumn fx:id="colRaza" prefWidth="177.5" text="Raza" />
+                    <TableColumn fx:id="colEdad" prefWidth="178.0" text="Edad" />
+                    <TableColumn fx:id="colId" prefWidth="70.0" text="ID" />
+                </columns>
+            </TableView>
+        </children>
+    </AnchorPane>
+
+</VBox>

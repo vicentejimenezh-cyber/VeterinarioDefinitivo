@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="840.0" spacing="24.0" style="-fx-background-color: linear-gradient(to bottom, #DFF7EE, #FFFFFF);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.PersonalApoyoViewController">
+
+    <padding>
+        <Insets bottom="32" left="32" right="32" top="32" />
+    </padding>
+
+    <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;" text="🐾 Panel del Personal de Apoyo 🐾">
+        <font>
+            <Font size="34.0" />
+        </font>
+    </Text>
+
+    <Label style="-fx-text-fill: #2E7D6E; -fx-font-size: 16px; -fx-font-weight: bold;" text="Gestione registros y consultas de manera rápida y sencilla" />
+
+    <AnchorPane prefHeight="340.0" prefWidth="760.0" style="-fx-background-color: white; -fx-background-radius: 20;                        -fx-border-radius: 20; -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 12, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER" spacing="18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                <Text style="-fx-fill: #2F855A; -fx-font-weight: bold;" text="Opciones disponibles:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+
+                <HBox alignment="CENTER" spacing="16.0">
+                    <Button fx:id="btnRegistrarVeterinario" onAction="#OnRegistrarVeterinario" style="-fx-background-color: #2ECC71; -fx-text-fill: white;                                     -fx-font-size: 15px; -fx-font-weight: bold;                                     -fx-background-radius: 28; -fx-border-radius: 28;                                     -fx-padding: 10 22 10 22;" text="➕ Registrar Veterinario" />
+                    <Button fx:id="btnRegistrarMascota" onAction="#OnRegistrarMascota" style="-fx-background-color: #2ECC71; -fx-text-fill: white;                                     -fx-font-size: 15px; -fx-font-weight: bold;                                     -fx-background-radius: 28; -fx-border-radius: 28;                                     -fx-padding: 10 22 10 22;" text="🐶 Registrar Mascota" />
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="16.0">
+                    <Button fx:id="btnRegistrarPropietario" onAction="#OnRegistrarPropietario" style="-fx-background-color: #2ECC71; -fx-text-fill: white;                                     -fx-font-size: 15px; -fx-font-weight: bold;                                     -fx-background-radius: 28; -fx-border-radius: 28;                                     -fx-padding: 10 22 10 22;" text="👤 Registrar Propietario" />
+                    <Button fx:id="btnAgendarConsulta" onAction="#OnAgendarConsulta" style="-fx-background-color: #1ABC9C; -fx-text-fill: white;                                     -fx-font-size: 15px; -fx-font-weight: bold;                                     -fx-background-radius: 28; -fx-border-radius: 28;                                     -fx-padding: 10 22 10 22;" text="📅 Agendar Consulta" />
+                </HBox>
+
+                <HBox fx:id="btnSali" alignment="CENTER" onDragDetected="#OnSalir" spacing="16.0" style="-fx-padding: 20 0 0 0;">
+                    <Button fx:id="btnSalir" onAction="#OnSalir" style="-fx-background-color: #E74C3C; -fx-text-fill: white;                                     -fx-font-size: 15px; -fx-font-weight: bold;                                     -fx-background-radius: 28; -fx-border-radius: 28;                                     -fx-padding: 10 22 10 22;" text="🚪 Volver" />
+                </HBox>
+
+            </VBox>
+        </children>
+    </AnchorPane>
+
+</VBox>

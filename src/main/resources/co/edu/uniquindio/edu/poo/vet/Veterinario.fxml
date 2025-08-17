@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="900.0" spacing="24.0" style="-fx-background-color: linear-gradient(to bottom, #E8FFF4, #FFFFFF);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.VeterinarioViewController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;" text="🐾 Panel del Veterinario">
+        <font>
+            <Font size="34.0" />
+        </font>
+    </Text>
+
+    <AnchorPane prefHeight="250.0" prefWidth="860.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;                        -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 2);">
+        <children>
+            <VBox alignment="TOP_CENTER" spacing="14.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+
+                <Label style="-fx-text-fill: #2E7D6E; -fx-font-size: 18px; -fx-font-weight: bold;" text="📋 Historial Clínico de Mascota" />
+
+                <HBox alignment="CENTER" spacing="10">
+                    <TextField fx:id="txtBuscarMascota" promptText="Ingrese nombre o ID de mascota" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #9BE7C4;" />
+                    <Button style="-fx-background-color: #1ABC9C; -fx-text-fill: white;                                    -fx-background-radius: 20; -fx-border-radius: 20;" text="🔍 Buscar" />
+                </HBox>
+
+                <TableView fx:id="tablaHistorial" prefHeight="150">
+                    <columns>
+                        <TableColumn fx:id="colFecha" prefWidth="120" text="Fecha" />
+                        <TableColumn fx:id="colDiagnostico" prefWidth="250" text="Diagnóstico" />
+                        <TableColumn fx:id="colTratamiento" prefWidth="250" text="Tratamiento" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <AnchorPane prefHeight="250.0" prefWidth="860.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;                        -fx-border-color: #9BE7C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 2);">
+        <children>
+            <VBox alignment="TOP_CENTER" spacing="14.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+
+                <Label style="-fx-text-fill: #2E7D6E; -fx-font-size: 18px; -fx-font-weight: bold;" text="📅 Citas Programadas" />
+
+                <TableView fx:id="tablaCitas" prefHeight="180">
+                    <columns>
+                        <TableColumn fx:id="colMascota" prefWidth="150" text="Mascota" />
+                        <TableColumn fx:id="colPropietario" prefWidth="150" text="Propietario" />
+                        <TableColumn fx:id="colFechaCita" prefWidth="120" text="Fecha" />
+                        <TableColumn fx:id="colHoraCita" prefWidth="100" text="Hora" />
+                        <TableColumn fx:id="colMotivo" prefWidth="200" text="Motivo" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <Button fx:id="btnVolver" onAction="#OnVolver" style="-fx-background-color: #E74C3C; -fx-text-fill: white;                    -fx-background-radius: 28; -fx-border-radius: 28;                    -fx-font-size: 15px; -fx-font-weight: bold;                    -fx-padding: 8 20 8 20;" text="⬅ Volver" />
+
+</VBox>

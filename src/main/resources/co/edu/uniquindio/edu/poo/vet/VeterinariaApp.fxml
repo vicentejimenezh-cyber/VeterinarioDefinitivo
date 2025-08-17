@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="480.0" prefWidth="840.0" spacing="24.0" style="-fx-background-color: linear-gradient(to bottom, #DFF7EE, #FFFFFF);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.VeterinariaAppViewController">
+
+    <padding>
+        <Insets bottom="32" left="32" right="32" top="32" />
+    </padding>
+
+    <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;" text="🐾 Bienvenido a la Clínica Veterinaria Con Vicente 🐾">
+        <font>
+            <Font size="34.0" />
+        </font>
+    </Text>
+
+    <Label fx:id="welcomeText" style="-fx-text-fill: #2E7D6E; -fx-font-size: 16px; -fx-font-weight: bold;" text="Cuidamos a tus mascotas con cariño y profesionalismo" />
+
+    <AnchorPane prefHeight="300.0" prefWidth="760.0"
+                style="-fx-background-color: white;
+                   -fx-background-radius: 20;
+                   -fx-border-radius: 20;
+                   -fx-border-color: #9BE7C4;
+                   -fx-border-width: 2;
+                   -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 12, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER" spacing="18.0"
+                  AnchorPane.topAnchor="0.0"
+                  AnchorPane.bottomAnchor="0.0"
+                  AnchorPane.leftAnchor="0.0"
+                  AnchorPane.rightAnchor="0.0">
+                <children>
+
+                    <!-- Título -->
+                    <Text text="Soy:"
+                          style="-fx-fill: #2F855A; -fx-font-weight: bold;">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Text>
+
+                    <!-- Botones principales -->
+                    <HBox alignment="CENTER" spacing="16.0">
+                        <children>
+                            <Button fx:id="btnVeterinario"
+                                    onAction="#OnVeterinario"
+                                    prefWidth="200"
+                                    text="🐶 Veterinario"
+                                    style="-fx-background-color: #2ECC71;
+                                       -fx-text-fill: white;
+                                       -fx-font-size: 15px;
+                                       -fx-font-weight: bold;
+                                       -fx-background-radius: 28;
+                                       -fx-border-radius: 28;
+                                       -fx-padding: 10 22 10 22;" />
+
+                            <Button fx:id="btnPersonalApoyo"
+                                    onAction="#OnPersonalApoyo"
+                                    prefWidth="200"
+                                    text="📋 Personal de Apoyo"
+                                    style="-fx-background-color: #1ABC9C;
+                                       -fx-text-fill: white;
+                                       -fx-font-size: 15px;
+                                       -fx-font-weight: bold;
+                                       -fx-background-radius: 28;
+                                       -fx-border-radius: 28;
+                                       -fx-padding: 10 22 10 22;" />
+                        </children>
+                    </HBox>
+
+                    <!-- Botón salir -->
+                    <HBox alignment="CENTER">
+                        <children>
+                            <Button fx:id="btnSalir"
+                                    onAction="#OnSalir"
+                                    prefWidth="200"
+                                    text="🚪 Salir"
+                                    style="-fx-background-color: #E74C3C;
+                                       -fx-text-fill: white;
+                                       -fx-font-size: 15px;
+                                       -fx-font-weight: bold;
+                                       -fx-background-radius: 28;
+                                       -fx-border-radius: 28;
+                                       -fx-padding: 10 22 10 22;" />
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+</VBox>

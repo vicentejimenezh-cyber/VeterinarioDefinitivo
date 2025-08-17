@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="860.0" spacing="22.0" style="-fx-background-color: linear-gradient(to bottom, #E8F9F1, #FFFFFF);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.edu.poo.vet.ViewController.RegistrarVeterinarioViewController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-text-fill: #1F6F54; -fx-font-weight: bold;" text="🐶 Registro de Veterinarios 🐱">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Label>
+
+    <AnchorPane prefHeight="273.0" prefWidth="820.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18;                        -fx-border-color: #A5E5C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER" spacing="12.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="12.0">
+
+                <TextField fx:id="txtNombre" promptText="✏ Nombre" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;" />
+                <TextField fx:id="txtApellido" promptText="👤 Apellido" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;" />
+                <TextField fx:id="txtTelefono" promptText="📞 Teléfono" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;" />
+                <TextField fx:id="txtDireccion" promptText="🏠 Dirección" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;" />
+                <TextField fx:id="txtIdProfesional" promptText="IdProfeional" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;" />
+
+                <Button fx:id="btnRegistrarVeterinario" onAction="#OnRegistrarVeterinar" style="-fx-background-color: #2ECC71; -fx-text-fill: white;                -fx-font-weight: bold; -fx-background-radius: 25; -fx-border-radius: 25;                -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="✅ Registrar Veterinario" />
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <AnchorPane prefHeight="139.0" prefWidth="820.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18;                        -fx-border-color: #A5E5C4; -fx-border-width: 2;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 3);">
+        <children>
+            <TableView fx:id="tablaVeterinarios" layoutX="16.0" layoutY="11.0" prefHeight="136.0" prefWidth="792.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="9.0">
+
+                <columns>
+                    <TableColumn fx:id="colNombre" prefWidth="150.0" text="Nombre" />
+                    <TableColumn fx:id="colApellido" prefWidth="150.0" text="Apellido" />
+                    <TableColumn fx:id="colTelefono" prefWidth="150.0" text="Teléfono" />
+                    <TableColumn fx:id="colDireccion" prefWidth="230.0" text="Dirección" />
+                    <TableColumn fx:id="colIdProfesional" prefWidth="100.0" text="ID Profesional" />
+                </columns>
+            </TableView>
+        </children>
+    </AnchorPane>
+
+</VBox>
