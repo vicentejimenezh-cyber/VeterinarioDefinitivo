@@ -6,6 +6,7 @@ public abstract class Persona {
     private String telefono;
     private String direccion;
 
+//constructor
     public Persona(String nombre, String apellido, String telefono, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -13,6 +14,7 @@ public abstract class Persona {
         this.direccion = direccion;
 
     }
+    // Getters and Setters
 
     public String getNombre() {
         return nombre;

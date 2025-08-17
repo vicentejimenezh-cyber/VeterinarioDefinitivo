@@ -11,7 +11,7 @@ public class AgendaCitaMedica {
     private LinkedList<Veterinario> listaVeterinarios;
 
 
-
+// Constructor
     public AgendaCitaMedica(LocalDate fecha, LocalTime hora, String motivoConsulta) {
         this.fecha = fecha;
         this.hora = hora;
@@ -19,6 +19,7 @@ public class AgendaCitaMedica {
         this.listaVeterinarios = new LinkedList<>();
 
     }
+    // Getters and Setters
     public LocalDate getFecha() {
         return fecha;
     }

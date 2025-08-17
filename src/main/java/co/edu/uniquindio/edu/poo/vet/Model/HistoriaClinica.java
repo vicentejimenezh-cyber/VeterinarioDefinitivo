@@ -5,11 +5,12 @@ import java.util.LinkedList;
 public class HistoriaClinica {
     Mascota mascota;
     private LinkedList<ConsultaMedica>consultas;
-
+    // Constructor
     public HistoriaClinica(Mascota mascota) {
         this.mascota = mascota;
         this.consultas = new LinkedList<>();
     }
+// Getters and Setters
     public Mascota getMascota() {
         return mascota;
     }

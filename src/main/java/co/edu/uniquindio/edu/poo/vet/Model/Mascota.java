@@ -9,6 +9,7 @@ public class Mascota {
     HistoriaClinica historiaClinica;
     Propietario propietario;
 
+// Constructorgit init
     public Mascota(String nombre, String especie, String raza, int edad,int id) {
         this.nombre = nombre;
         this.especie = especie;
@@ -18,7 +19,7 @@ public class Mascota {
         HistoriaClinica historiaClinica;
         Propietario propietario;
     }
-
+// Getters and Setters
     public String getNombre() {
         return nombre;
     }
